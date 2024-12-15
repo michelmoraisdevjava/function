@@ -1,4 +1,4 @@
-//Reference method with static method
+//Reference method with non-static method
 package application;
 
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		List<String> names = list.stream().map(Product::staticToUppercaseName).collect(Collectors.toList());
+		List<String> names = list.stream().map(Product::nonStaticToUppercaseName).collect(Collectors.toList());
 		
 		names.forEach(System.out::println);
 
